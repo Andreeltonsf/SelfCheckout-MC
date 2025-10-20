@@ -1,3 +1,6 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+
 const ProductsPage = () => {
   return (
     <div className="bg-black w-full h-full text-white p-8">
@@ -5,6 +8,10 @@ const ProductsPage = () => {
       <p>Lista de produtos</p>
       <p>Lista de produtos</p>
       <p>Lista de produtos</p>
+      <Button className="mt-4" variant="secondary">
+        Adicionar Produto
+      </Button>
+      <Input placeholder="Bora desenvolver esse projeto!" />
     </div>
   );
 };
