@@ -8,9 +8,7 @@ const ProductsPage = () => {
       <p>Lista de produtos</p>
       <p>Lista de produtos</p>
       <p>Lista de produtos</p>
-      <Button className="mt-4" variant="secondary">
-        Adicionar Produto
-      </Button>
+      <Button className="mt-4">Adicionar Produto</Button>
       <Input placeholder="Bora desenvolver esse projeto!" />
     </div>
   );
