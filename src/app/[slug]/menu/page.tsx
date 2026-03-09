@@ -1,5 +1,6 @@
 import { db } from "@/lib/prisma";
 import { notFound } from "next/navigation";
+import RestaurantCategories from "./components/categories";
 import { RestaurantHeader } from "./components/header";
 
 interface MenuPageProps {
@@ -25,6 +26,9 @@ export default async function MenuPage({
         where: {
             slug,
         },
+        include: {
+            MenuCategories: { include: { Products: true } },
+        },
     });
 
     if (!restaurant) {
@@ -33,6 +37,7 @@ export default async function MenuPage({
     return (
         <div>
             <RestaurantHeader restaurant={restaurant} />
+            <RestaurantCategories restaurant={restaurant} />
         </div>
     );
 }
